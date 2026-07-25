@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="360" viewBox="0 0 960 360" font-family="ui-monospace,Menlo,monospace">
+  <rect width="960" height="360" rx="14" fill="#0c0e13"/>
+  <text x="30" y="46" fill="#e9eaee" font-size="18" font-weight="600" font-family="'Segoe UI',sans-serif">Deep Learning Firewall</text>
+  <rect x="292" y="30" width="112" height="22" rx="6" fill="#12351f"/>
+  <text x="348" y="45" fill="#7ee2a8" font-size="12" text-anchor="middle" font-family="'Segoe UI',sans-serif">model loaded</text>
+  <text x="30" y="74" fill="#9aa0ac" font-size="13" font-family="'Segoe UI',sans-serif">Blocked requests: 4</text>
+
+  <g font-size="12.5">
+    <line x1="30" y1="96" x2="930" y2="96" stroke="#222632"/>
+    <text x="30" y="116" fill="#8b93ff">time</text>
+    <text x="150" y="116" fill="#8b93ff">source ip</text>
+    <text x="330" y="116" fill="#8b93ff">url</text>
+    <text x="840" y="116" fill="#8b93ff">score</text>
+    <line x1="30" y1="128" x2="930" y2="128" stroke="#222632"/>
+
+    <g fill="#cdd2e0">
+      <text x="30" y="152">14:22:07</text><text x="150" y="152">203.0.113.44</text>
+      <text x="330" y="152">/search?q=1' UNION SELECT password FROM users--</text><text x="840" y="152" fill="#f4a3b4">0.994</text>
+      <line x1="30" y1="164" x2="930" y2="164" stroke="#191c24"/>
+
+      <text x="30" y="188">14:21:55</text><text x="150" y="188">198.51.100.9</text>
+      <text x="330" y="188">/profile?name=&lt;script&gt;alert(1)&lt;/script&gt;</text><text x="840" y="188" fill="#f4a3b4">0.987</text>
+      <line x1="30" y1="200" x2="930" y2="200" stroke="#191c24"/>
+
+      <text x="30" y="224">14:21:30</text><text x="150" y="224">203.0.113.7</text>
+      <text x="330" y="224">/download?file=../../../../etc/passwd</text><text x="840" y="224" fill="#f4a3b4">0.971</text>
+      <line x1="30" y1="236" x2="930" y2="236" stroke="#191c24"/>
+
+      <text x="30" y="260">14:20:12</text><text x="150" y="260">192.0.2.55</text>
+      <text x="330" y="260">/api/exec?cmd=; cat /etc/shadow</text><text x="840" y="260" fill="#f4a3b4">0.958</text>
+      <line x1="30" y1="272" x2="930" y2="272" stroke="#191c24"/>
+    </g>
+  </g>
+  <text x="30" y="320" fill="#6a7180" font-size="12" font-family="'Segoe UI',sans-serif">Every request is scored before it reaches the app; anything above the threshold is blocked (403) and logged with its source IP.</text>
+</svg>
